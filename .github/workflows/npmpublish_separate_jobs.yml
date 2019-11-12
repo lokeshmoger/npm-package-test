@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/rachmari
+      - run: cat /home/runner/work/_temp/.npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -38,6 +39,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/rachmari
           scope: '@rachmari'
+      - run: cat /home/runner/work/_temp/.npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
