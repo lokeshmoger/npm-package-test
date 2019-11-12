@@ -13,7 +13,6 @@ jobs:
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
-        scope: '@rachmari'
     - run: cat /home/runner/work/_temp/.npmrc
     - run: npm install
     - run: npm publish
