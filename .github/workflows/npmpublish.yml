@@ -12,9 +12,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
+    - run: npm install
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
         registry-url: 'https://registry.npmjs.org/rachmari'
     - run: cat /home/runner/work/_temp/.npmrc
-    - run: npm install
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
