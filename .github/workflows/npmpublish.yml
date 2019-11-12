@@ -20,7 +20,7 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - uses: actions/setup-node@v1
       with:
-        registry-url: 'https://npm.pkg.github.com'
+        registry-url: 'https://npm.pkg.github.com/rachmari'
         scope: '@rachmari'
     - run: cat /home/runner/work/_temp/.npmrc
     - run: npm publish
