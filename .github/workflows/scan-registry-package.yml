@@ -1,4 +1,4 @@
-on: package
+on: registry_package
 
 name: Scan Package
 
