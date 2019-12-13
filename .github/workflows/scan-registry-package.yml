@@ -1,0 +1,17 @@
+on: registry_package
+
+name: Scan Package
+
+jobs:
+  scan:
+    name: Scan Package
+    runs-on: ubuntu-latest
+    steps:
+      - id: scan
+        run: |
+          echo "Doing the scan"
+      - id: payload
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
